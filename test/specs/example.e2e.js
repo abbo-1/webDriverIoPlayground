@@ -26,5 +26,7 @@ const SecurePage = require('../pageobjects/secure.page');
 
 //then comes a function, followed by an IT block. The it block is where your test is running. then your it function should have a name that tells you what you are trying to test.
 
+//don't write multiple tests in the same it blocks. isolate tests as much as possible.
+
 
 
