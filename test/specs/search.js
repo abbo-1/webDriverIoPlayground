@@ -23,37 +23,21 @@ describe('Amazon Product Search', () => {
     });
 
     it('changes sorting method by avg review', async () => {
-        // const selectBox = await $('#a-autoid-0-announce')
-        // const avgReview = await selectBox.selectByAttribute('stringVal', 'review-ran');
-        // const aveReview2 = await selectBox.click('[stringVal="review-ran"]');
+
         const dropdown = $("#a-autoid-0-announce")
         await dropdown.click();
 
-        // const openedDropdown = $('#a-popover-3').selectByVisibleText("Avg. Customer Review")
-        // const openedDropdown = $('#a-popover-3').selectByIndex(2)
-        // await openedDropdown.click();
-
-        // $("#dropdown").selectByIndex(0)
     });
 
-    it('scrolls down', async () => {
-        const title = await document.getElementById('The Lord of the Rings: Motion Picture Trilogy Blu-ray')
-        await title.scrollIntoView()
+    it('finds blu-ray and scrolls down, and clicks on item', async () => {
+        const title = $('=The Lord of the Rings: Motion Picture Trilogy Blu-ray');
+        await title.scrollIntoView();
+        await browser.pause(3000);
+        await title.click();
+    })
+
+    it('takes a screenshot', async () => {
+        await browser.pause(3000);
+        await browser.saveScreenshot('./screenshots/test1.png')
     })
 });
-
-    // it('updates the search category', async () =>)
-// })
-
-// const selectBox = await $('#selectbox');
-// const value = await selectBox.getValue();
-// console.log(value); // returns "someValue0"
-
-// await selectBox.selectByAttribute('stringVal', 'review-ran');
-// console.log(await selectBox.getValue()); // returns "someValue3"
-
-// await selectBox.selectByAttribute('name', 'someName5');
-// console.log(await selectBox.getValue()); // returns "someValue5"
-// });
-
-// data-value="{"stringVal":"review-rank"}"
