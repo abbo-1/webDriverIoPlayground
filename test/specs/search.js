@@ -36,8 +36,17 @@ describe('Amazon Product Search', () => {
         await title.click();
     })
 
+    it('verified price', async () => {
+        if $()
+    })
+
     it('takes a screenshot', async () => {
         await browser.pause(3000);
         await browser.saveScreenshot('./screenshots/test1.png')
     })
-});
+
+    it('adds to shopping cart', async () => {
+        const amazonAddToCart = $('#nav-search-submit-button');
+
+        amazonAddToCart.click();
+    });
