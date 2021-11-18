@@ -37,7 +37,7 @@ describe('Amazon Product Search', () => {
     })
 
     it('verified price', async () => {
-        if $()
+        if $(>'$100')
     })
 
     it('takes a screenshot', async () => {
@@ -46,7 +46,7 @@ describe('Amazon Product Search', () => {
     })
 
     it('adds to shopping cart', async () => {
-        const amazonAddToCart = $('#nav-search-submit-button');
+        const amazonAddToCart = $('#add-to-cart-button');
 
         amazonAddToCart.click();
     });
