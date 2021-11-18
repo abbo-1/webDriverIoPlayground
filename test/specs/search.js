@@ -36,10 +36,6 @@ describe('Amazon Product Search', () => {
         await title.click();
     })
 
-    it('verified price', async () => {
-        if $(>'$100')
-    })
-
     it('takes a screenshot', async () => {
         await browser.pause(3000);
         await browser.saveScreenshot('./screenshots/test1.png')
@@ -47,6 +43,5 @@ describe('Amazon Product Search', () => {
 
     it('adds to shopping cart', async () => {
         const amazonAddToCart = $('#add-to-cart-button');
-
         amazonAddToCart.click();
     });
